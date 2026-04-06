@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kimgeewon portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <script src="js/footer.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+
+    <script src="js/header-nav-mq.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="custom-cursor"></div>
+    <header>
+      <nav class="nav-container">
+        <!-- 왼쪽 로고 박스 -->
+        <div class="nav-box logo-box pc-only">
+          <a href="#intro" class="logo">intro</a>
+        </div>
+        <!-- <nav> -->
+        <!-- <ul> -->
+        <!-- 중앙 메뉴 박스 -->
+        <ul class="nav-box menu-box pc-only">
+          <!-- <li><a href="#intro">intro</a></li> -->
+          <li><a href="#profile">profile</a></li>
+          <li><a href="#design">design</a></li>
+          <li><a href="#branding">branding</a></li>
+          <li><a href="#publishing">publishing</a></li>
+          <!-- <li><a href="#footer">contact</a></li> -->
+        </ul>
+        <!-- </nav> -->
+        <!-- 오른쪽 연락처 박스 -->
+        <div class="nav-box contact-box pc-only">
+          <a href="#footer">Contact</a>
+        </div>
+
+        <!--  햄버거 버튼 (모바일 전용) -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- 모바일 전용 풀스크린/사이드 메뉴 -->
+      <div class="mobile-menu" id="mobile-menu">
+        <ul>
+          <li><a href="#profile">profile</a></li>
+          <li><a href="#design">design</a></li>
+          <li><a href="#branding">branding</a></li>
+          <li><a href="#publishing">publishing</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- Intro Section -->
+      <section id="intro" class="section">
+        <div class="intro-content">
+          <h1 class="intro-heading">
+            <span class="intro-title-line">
+              <span class="intro-fill-text" data-intro-line="0"
+                >Creative Direction &amp;
+              </span>
+              <span
+                class="intro-fill-text intro-fill-text--accent"
+                data-intro-line="0"
+                >Visual Design</span
+              >
+            </span>
+          </h1>
+
+          <p class="description intro-description">
+            <span class="intro-desc-line">
+              <span class="intro-fill-text" data-intro-line="1"
+                >Designing immersive web and
+              </span>
+              <strong
+                class="intro-fill-text intro-fill-text--accent"
+                data-intro-line="1"
+                >UI/UX</strong
+              >
+              <span class="intro-fill-text" data-intro-line="1">
+                experiences</span
+              >
+            </span>
+            <span class="intro-desc-line">
+              <span class="accent-serif intro-fill-text" data-intro-line="2"
+                >with clarity, depth, and purposeful interaction.</span
+              >
+            </span>
+            <span class="intro-desc-line">
+              <span class="intro-fill-text" data-intro-line="3"
+                >From branding to publishing, crafting refined digital
+              </span>
+            </span>
+            <span class="intro-desc-line">
+              <span class="intro-fill-text" data-intro-line="4">products.</span>
+            </span>
+          </p>
+        </div>
+
+        <div class="deco-images">
+          <img src="images/히어로-블러셔.png" alt="hero-blush" />
+          <img src="images/히어로-빵.png" alt="hero-bread" />
+          <img src="images/히어로-사탕.png" alt="hero-candy" />
+          <img src="images/히어로-사진.png" alt="hero-photo" />
+        </div>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="section">
+        <div class="profile-container">
+          <!-- 왼쪽: 소개 문구 -->
+          <div class="left-content">
+            <div class="profile-text">
+              <p>
+                낯선 시선에서 시작해 익숙함을 새롭게 바라보는 디자이너입니다.<br />
+                단순한 시각적 결과물에 머무르지 않고, 사용자 경험과 흐름을 함께
+                설계합니다.<br />
+                웹이라는 공간 안에서 정보와 감정이 자연스럽게 연결되도록
+                고민하며,<br />
+                직관적인 구조 위에 감각적인 디테일을 더해 몰입도 있는 경험을
+                만듭니다.
+              </p>
+              <p>
+                클라이언트의 니즈를 기반으로 문제를 정의하고,<br />
+                빠르면서도 섬세한 실행력으로 완성도 높은 결과를 만들어냅니다.<br />
+                보는 디자인이 아닌, 사용되는 디자인.<br />
+                그리고 기억에 남는 경험을 만드는 웹 디자이너입니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 사진 및 프로필 정보 -->
+          <div class="right-content">
+            <div class="name-tag">gee won</div>
+            <div class="photo-box">
+              <img src="images/증명사진.png" alt="my-photo" />
+            </div>
+            <div class="contact-info">
+              <span>📞 010.4721.7410</span>
+              <span>✉️ kjwp5897@naver.com</span>
+            </div>
+            <div class="sub-text">
+              직관적인 흐름을 설계하고,<br />
+              의미 있는 디지털 경험을 만듭니다.
+            </div>
+          </div>
+        </div>
+        <!-- 하단 상세 프로필 정보 -->
+        <div class="profile-details">
+          <!-- 왼쪽: 학력 및 경력 -->
+          <div class="details-left">
+            <div class="detail-section">
+              <h3>education</h3>
+              <div class="detail-item">
+                <span class="year">2019.</span>
+                <p>운암고등학교</p>
+                <span class="status">졸업</span>
+              </div>
+              <div class="detail-item">
+                <span class="year">2023.</span>
+                <p>대구가톨릭대학교<br />AI 인공지능 빅데이터공학과</p>
+                <span class="status">졸업</span>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>experience</h3>
+              <div class="detail-item">
+                <span class="year">2025.</span>
+                <p>UI/UX 디자인 및 웹·앱 개발 실무 과정</p>
+              </div>
+              <div class="detail-item">
+                <span class="year">2023.</span>
+                <p>
+                  AI 기반 홈트레이닝 자세 피드백 웹 서비스 제작 (Mediapipe 활용)
+                </p>
+              </div>
+              <div class="detail-item">
+                <span class="year">2022.</span>
+                <p>
+                  캡스톤 프로젝트: 실시간 객체 인식 기반 이륜차 안전모 모니터링
+                  시스템 제작
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 기술 스택 -->
+          <div class="details-right">
+            <h3>skills</h3>
+            <div class="skills-grid">
+              <img src="images/포토샵이미지.png" alt="Photoshop" />
+              <img src="images/일러스트이미지.png" alt="Illustrator" />
+              <img src="images/피그마이미지.png" alt="Figma" />
+              <img src="images/vs코드이미지.png" alt="VS Code" />
+              <img src="images/깃허브이미지.png" alt="GitHub" />
+              <img src="images/html이미지.png" alt="HTML5" />
+              <img src="images/css이미지.png" alt="CSS3" />
+              <img src="images/js이미지.png" alt="JavaScript" />
+              <img src="images/gpt.png" alt="Gpt" />
+              <img src="images/jemi.png" alt="Jemi" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Index Section (Work Categories) -->
+      <section id="work-index" class="work-categories-section">
+        <div class="work-container">
+          <!-- 01 Design -->
+          <div class="category-item">
+            <div class="category-content">
+              <h2 class="num-text">01</h2>
+              <h3 class="category-title">design</h3>
+              <ul class="work-list">
+                <li>랜딩페이지 - 젠틀몬스터</li>
+                <li>상세페이지 - 페스룸</li>
+                <li>gif상세페이지 - 에어팟맥스2</li>
+                <li>sns배너 디자인</li>
+                <li>포스터 디자인 - 나이키 x 슈프림 에어포스</li>
+                <li>웹사이트 리디자인 - 크린토피아</li>
+              </ul>
+            </div>
+            <div class="vertical-line"></div>
+          </div>
+
+          <!-- 02 Branding -->
+          <div class="category-item">
+            <div class="category-content">
+              <h2 class="num-text">02</h2>
+              <h3 class="category-title">branding</h3>
+              <ul class="work-list">
+                <li>플랫폼 웹사이트 제작 - 잇유(eat u)</li>
+                <li>앱디자인 - 쏠(sole)</li>
+              </ul>
+            </div>
+            <div class="vertical-line"></div>
+          </div>
+
+          <!-- 03 Publishing -->
+          <div class="category-item">
+            <div class="category-content">
+              <h2 class="num-text">03</h2>
+              <h3 class="category-title">publishing</h3>
+              <ul class="work-list">
+                <li>쇼핑몰 플랫폼 제작</li>
+                <li>클론코딩 - 오펜</li>
+              </ul>
+            </div>
+            <div class="vertical-line"></div>
+          </div>
+        </div>
+      </section>
+      <!-- 01디자인 -->
+      <!-- Design Section: Gentle Monster -->
+      <section id="design" class="section">
+        <!-- 섹션 헤더 (우측 상단 타이틀) -->
+        <div class="design-header">
+          <span class="num">01</span>
+          <h2 class="title">Design</h2>
+        </div>
+        <!-- ------------------- -->
+        <!-- 슬라이드 컨테이너 추가 -->
+        <div
+          class="design-slider-container"
+          style="position: relative; overflow: hidden"
+        >
+          <!-- 좌우 화살표 버튼 (아이콘 경로는 본인 파일에 맞게 수정) -->
+          <button
+            class="slide-btn prev-btn"
+            style="
+              position: absolute;
+              left: 0;
+              top: 30%;
+              z-index: 10;
+              background: none;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            <img
+              src="images/arrow_left.png"
+              alt="이전"
+              style="width: 40px; opacity: 0.5"
+            />
+          </button>
+          <button
+            class="slide-btn next-btn"
+            style="
+              position: absolute;
+              right: 0;
+              top: 30%;
+              z-index: 10;
+              background: none;
+              border: none;
+              cursor: pointer;
+            "
+          >
+            <img
+              src="images/arrow_right.png"
+              alt="다음"
+              style="width: 40px; opacity: 0.5"
+            />
+          </button>
+          <!-- ------------------- -->
+
+          <div
+            class="design-slides-wrapper"
+            style="display: flex; transition: transform 0.5s ease-in-out"
+          >
+            <!-- [01 젠틀몬스터 슬라이드] - 기존 구조 그대로 -->
+            <div
+              class="design-slide-item active"
+              style="min-width: 100%; box-sizing: border-box; padding: 0 50px"
+            >
+              <!-- ------------------- -->
+              <!-- 1. 젠틀몬스터 스크롤 윈도우 -->
+              <div class="gentle-monster-window">
+                <div class="scroll-content">
+                  <!-- 여기에 세로로 긴 랜딩페이지 이미지를 넣어주세요 -->
+                  <img
+                    src="images/김지원_디자인 구성요소 제작.jpg"
+                    alt="젠틀몬스터 랜딩페이지"
+                  />
+                </div>
+              </div>
+
+              <!-- 2. 하단 정보 영역 (양옆 배치) -->
+              <div class="item-info-row">
+                <div class="info-left">
+                  <p class="work-label">
+                    <strong>Work</strong> 랜딩페이지 - 젠틀몬스터 부케컬렉션
+                  </p>
+                  <p class="contribution-text">개인 프로젝트 | 기여도 100%</p>
+                </div>
+
+                <div class="info-right">
+                  <p>Gentle Monster 2026 BOUQUET Collection Landing Page</p>
+                  <p class="desc-text">
+                    브랜드의 실험적인 비주얼과 감각적인 스토리텔링을 기반으로<br />
+                    컬렉션 아이덴티티를 강조한 몰입형 랜딩페이지를
+                    디자인했습니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3. 사용 툴 영역 -->
+              <div class="tool-info-area">
+                <span class="tool-label"><strong>Tool</strong></span>
+                <div class="tool-icons">
+                  <img src="images/포토샵이미지.png" alt="Photoshop" />
+                  <img src="images/일러스트이미지.png" alt="Illustrator" />
+                  <img src="images/피그마이미지.png" alt="Figma" />
+                </div>
+              </div>
+            </div>
+            <!-- [02 페스룸 슬라이드] - 젠틀몬스터 구조 복사 -->
+            <div
+              class="design-slide-item"
+              style="min-width: 100%; box-sizing: border-box; padding: 0 50px"
+            >
+              <div class="gentle-monster-window">
+                <div class="scroll-content">
+                  <!-- 보내주신 페스룸 이미지 파일명으로 수정하세요 -->
+                  <img src="images/상세페이지 제작.jpg" alt="페스룸" />
+                </div>
+              </div>
+
+              <div class="item-info-row">
+                <div class="info-left">
+                  <p class="work-label">
+                    <strong>Work</strong> 상세페이지-페스룸(제로 오도어
+                    스프레이)
+                  </p>
+                  <p class="contribution-text">개인 프로젝트 | 기여도 100%</p>
+                </div>
+                <div class="info-right">
+                  <p>PETHROOM Zero Odor Spray</p>
+                  <p class="desc-text">
+                    사용자 관점의 정보 흐름을 설계해<br />
+                    제품 이해도를 높이는 상세페이지 디자인을 구현했습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tool-info-area">
+                <span class="tool-label"><strong>Tool</strong></span>
+                <div class="tool-icons">
+                  <img src="images/포토샵이미지.png" alt="Photoshop" />
+                  <img src="images/일러스트이미지.png" alt="Illustrator" />
+                </div>
+              </div>
+            </div>
+            <!-- 에어팟맥스 -->
+            <!-- [03 에어팟 맥스 슬라이드] -->
+            <div
+              class="design-slide-item airpods-max-slide"
+              style="min-width: 100%; box-sizing: border-box; padding: 0 50px"
+            >
+              <!-- 스크롤 윈도우 영역 (클래스 추가) -->
+              <div class="gentle-monster-window">
+                <div class="scroll-content">
+                  <!-- 준비하신 이미지와 GIF를 순서대로 나열하세요 -->
+                  <img src="images/max_01.jpg" alt="에어팟맥스1" />
+                  <img src="images/gif_max_01.gif" alt="색상gif" />
+                  <img src="images/max_02.jpg" alt="에어팟맥스2" />
+                  <img src="images/gif_max_02.gif" alt="회전gif" />
+                  <img src="images/max_03.jpg" alt="에어팟맥스3" />
+                  <img src="images/gif_max_03.gif" alt="공학gif" />
+                  <img src="images/max_04.jpg" alt="에어팟맥스4" />
+                  <img src="images/max_05.jpg" alt="에어팟맥스5" />
+                </div>
+              </div>
+
+              <!-- 하단 정보 영역 -->
+              <div class="item-info-row">
+                <div class="info-left">
+                  <p class="work-label">
+                    <strong>Work</strong> gif상세페이지-에어팟맥스2
+                  </p>
+                  <p class="contribution-text">개인 프로젝트 | 기여도 100%</p>
+                </div>
+
+                <div class="info-right">
+                  <p>AirPods Max GIF Detail Page</p>
+                  <p class="desc-text">
+                    Photoshop을 활용한 GIF 제작으로 제품의 특징과 사용감을
+                    시각적으로 표현하고,<br />
+                    동적인 요소를 통해 몰입도 높은 상세페이지를 구현했습니다.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 사용 툴 영역 -->
+              <div class="tool-info-area">
+                <span class="tool-label"><strong>Tool</strong></span>
+                <div class="tool-icons">
+                  <img src="images/포토샵이미지.png" alt="Photoshop" />
+                  <img src="images/일러스트이미지.png" alt="Illustrator" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- wrapper 끝 -->
+          <!-- dot -->
+          <div
+            class="slide-pagination"
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 10px;
+              margin-top: 20px;
+            "
+          >
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <!-- container 끝 -->
+
+        <!-- [04 크린토피아 리디자인 프로젝트] -->
+        <div
+          class="redesign-project-item"
+          style="
+            margin-top: 100px;
+            padding: 0 20px;
+            border-top: 1px solid #eee;
+            padding-top: 80px;
+          "
+        >
+          <div
+            class="comparison-row"
+            style="
+              display: flex;
+              gap: 40px;
+              margin-bottom: 30px;
+              margin-top: 60px;
+            "
+          >
+            <!-- (1) 기존 사이트 -->
+            <div class="comparison-box" style="flex: 1; text-align: center">
+              <p
+                style="
+                  margin-bottom: 15px;
+                  font-size: 13px;
+                  color: #999;
+                  letter-spacing: 1px;
+                "
+              >
+                ORIGINAL
+              </p>
+              <div
+                class="gentle-monster-window"
+                style="height: 500px; margin-bottom: 15px"
+              >
+                <div class="scroll-content">
+                  <img src="images/cleantopia.png" alt="기존 사이트" />
+                </div>
+              </div>
+              <!-- 바로가기 링크 -->
+              <a
+                href="https://www.cleantopia.com/kr/main.do"
+                target="_blank"
+                class="text-link"
+                >기존 사이트 바로가기</a
+              >
+            </div>
+
+            <!-- (2) 리디자인 사이트 -->
+            <div class="comparison-box" style="flex: 1; text-align: center">
+              <p
+                style="
+                  margin-bottom: 15px;
+                  font-size: 13px;
+                  color: #999;
+                  font-weight: bold;
+                  letter-spacing: 1px;
+                "
+              >
+                REDESIGN
+              </p>
+              <div
+                class="gentle-monster-window"
+                style="
+                  height: 500px;
+                  margin-bottom: 15px;
+                  border: 1px solid #ddd;
+                "
+              >
+                <div class="scroll-content">
+                  <img src="images/re_cleantopia.jpg" alt="리디자인 사이트" />
+                </div>
+              </div>
+              <!-- 바로가기 링크 -->
+              <a
+                href="리디자인링크 넣어야됨"
+                target="_blank"
+                class="text-link"
+                style="font-weight: bold; color: #888"
+                >리디자인 사이트 바로가기</a
+              >
+            </div>
+          </div>
+
+          <!-- 하단 정보 (기존 슬라이드와 동일한 구조) -->
+          <div class="item-info-row">
+            <div class="info-left">
+              <p class="work-label">
+                <strong>Work</strong> 웹사이트 리디자인 프로젝트 - 크린토피아
+              </p>
+              <p class="contribution-text">팀 프로젝트 | 기여도 80%</p>
+            </div>
+            <div class="info-right">
+              <p>Cleantopia Website Redesign Project</p>
+              <p class="desc-text">
+                사용자 경험을 중심으로 레이아웃을 재구성하여<br />
+                브랜드 아이덴티티를 강화한 리디자인 프로젝트입니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- 사용 툴 (이미지 기반) -->
+          <div class="tool-info-area">
+            <span class="tool-label"><strong>Tool</strong></span>
+            <div class="tool-icons">
+              <img src="images/포토샵이미지.png" alt="PS" />
+              <img src="images/일러스트이미지.png" alt="AI" />
+              <img src="images/html이미지.png" alt="HTML" />
+              <img src="images/css이미지.png" alt="CSS" />
+              <img src="images/js이미지.png" alt="JS" />
+              <img src="images/피그마이미지.png" alt="Figma" />
+              <img src="images/vs코드이미지.png" alt="VSCode" />
+            </div>
+          </div>
+        </div>
+
+        <!-- [05 포스터 디자인] - 기존 CSS 클래스(윈도우 스크롤) 100% 재사용 -->
+        <!-- [05 포스터 디자인] - 배경색 적용 및 하단 라인 정렬 최종본 -->
+        <section
+          id="poster-design"
+          class="section"
+          style="
+            margin-top: 100px;
+            padding: 100px 50px;
+            border-top: 1px solid #eee;
+            background-color: #f5f5f5;
+          "
+        >
+          <!-- 이미지 전시 영역 (좌우 배치) -->
+          <div
+            class="comparison-row"
+            style="
+              display: flex;
+              gap: 50px;
+              margin-bottom: 60px;
+              align-items: flex-start;
+              justify-content: center;
+            "
+          >
+            <!-- (1) 메인 포스터: 전체 이미지 노출 -->
+            <div
+              class="comparison-box"
+              style="flex: 1; text-align: center; max-width: 450px"
+            >
+              <p
+                style="
+                  margin-bottom: 20px;
+                  font-size: 13px;
+                  color: #999;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                "
+              >
+                Main Poster
+              </p>
+              <div
+                class="poster-full-view"
+                style="
+                  width: 100%;
+                  border-radius: 4px;
+                  overflow: hidden;
+                  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+                  background: #f5f5f5;
+                "
+              >
+                <img
+                  src="images/슈프림나이키 에어포스_김지원.jpg"
+                  alt="나이키 슈프림 메인 포스터"
+                  style="width: 100%; height: auto; display: block"
+                />
+              </div>
+            </div>
+
+            <!-- (2) 리사이징 버전: 스크롤 윈도우 (메인 포스터와 하단 라인 일치) -->
+            <div
+              class="comparison-box"
+              style="flex: 1; text-align: center; max-width: 450px"
+            >
+              <p
+                style="
+                  margin-bottom: 20px;
+                  font-size: 13px;
+                  color: #999;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                  font-weight: 500;
+                "
+              >
+                Resized Version
+              </p>
+              <!-- height 값을 약 670px로 설정하여 왼쪽 포스터의 높이와 시각적으로 맞췄습니다 -->
+              <div
+                class="gentle-monster-window"
+                style="
+                  height: 675px;
+                  border: none;
+                  background: #f5f5f5;
+                  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+                  overflow: hidden;
+                  border-radius: 4px;
+                "
+              >
+                <div class="scroll-content">
+                  <img
+                    src="images/에어포스_인스타용.jpg"
+                    alt="리사이즈 버전 1"
+                    style="width: 100%; margin-bottom: 56px; display: block"
+                  />
+                  <img
+                    src="images/에어포스_가로형배너.jpg"
+                    alt="리사이즈 버전 2"
+                    style="width: 100%; display: block"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 하단 정보 영역 (기존 디자인 스타일 유지) -->
+          <div class="item-info-row">
+            <div class="info-left">
+              <p class="work-label">
+                <strong>Work</strong> 포스터 디자인 - 나이키x슈프림 에어포스 1
+              </p>
+              <p class="contribution-text">개인 프로젝트 | 기여도 100%</p>
+            </div>
+
+            <div class="info-right">
+              <p>Nike x Supreme Air Force 1 Poster Campaign</p>
+              <p>
+                브랜드의 강렬한 아이덴티티를 시각화한 포스터 디자인입니다.<br />
+                다양한 매체 규격에 맞춘 리사이징 작업을 통해 디자인의 확장성을
+                고려했습니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- 사용 툴 영역 (기존 디자인 스타일 유지) -->
+          <div class="tool-info-area">
+            <span class="tool-label"><strong>Tool</strong></span>
+            <div class="tool-icons">
+              <img src="images/포토샵이미지.png" alt="PS" />
+              <img src="images/일러스트이미지.png" alt="AI" />
+            </div>
+          </div>
+        </section>
+        <!-- 02 branding -->
+        <!-- 02 Branding Section -->
+        <section id="branding" class="section branding-section">
+          <!-- 타이틀 -->
+          <div class="branding-header">
+            <span class="num">02</span>
+            <h2 class="title">Branding</h2>
+          </div>
+
+          <!-- 콘텐츠 영역 (잇유 프로젝트) -->
+          <div class="branding-content">
+            <!-- 왼쪽 이미지: 스크롤 형식으로 수정됨 -->
+            <div class="branding-left">
+              <!-- 젠몬/페스룸처럼 스크롤 틀이 되는 카드 -->
+              <div class="branding-card">
+                <!-- 마우스 올리면 실제로 위로 움직일 박스 -->
+                <div class="branding-scroll-box">
+                  <!-- 여기에 세로로 긴 전체 페이지 이미지를 넣으세요 -->
+                  <img src="images/잇유-메인.png" alt="잇유-메인" />
+                </div>
+              </div>
+            </div>
+
+            <!-- 오른쪽 텍스트 -->
+            <div class="branding-right">
+              <p class="work">
+                <strong>Work</strong> 플랫폼 웹 사이트 제작 - 혼자 먹기 싫을 때,
+                잇유
+              </p>
+              <p class="contribution">팀 프로젝트 | 기여도 33%</p>
+
+              <div class="tool">
+                <strong>Tool</strong>
+                <div class="tool-icons">
+                  <img src="images/포토샵이미지.png" />
+                  <img src="images/일러스트이미지.png" />
+                  <img src="images/html이미지.png" />
+                  <img src="images/css이미지.png" />
+                  <img src="images/js이미지.png" />
+                  <img src="images/피그마이미지.png" />
+                  <img src="images/vs코드이미지.png" />
+                </div>
+              </div>
+
+              <p class="desc">
+                EAT-U Matching Service Landing Page<br />
+                사용자 취향과 위치 기반 데이터를 바탕으로, 함께 식사할 사람을
+                연결해주는 서비스를 기획하고<br />
+                직관적인 UX 흐름과 간결한 인터페이스 중심으로 매칭 경험을
+                디자인했습니다.
+              </p>
+
+              <a href="https://kimgeewon.github.io/eatu/" class="show-more"
+                >show more</a
+              >
+            </div>
+          </div>
+
+          <!-- -sole -->
+          <div class="branding-content">
+            <!-- 왼쪽 이미지: 스크롤 형식 -->
+            <div class="branding-left">
+              <div class="branding-card sole-bg">
+                <!-- 스크롤될 긴 이미지 컨테이너 -->
+                <div class="branding-scroll-box">
+                  <img src="images/쏠-프로세스.png" alt="SOLE 프로세스" />
+                </div>
+              </div>
+            </div>
+
+            <!-- 오른쪽 텍스트 (이전과 동일) -->
+            <div class="branding-right">
+              <p class="work"><strong>Work</strong> 앱 디자인 - SOLE (쏠)</p>
+              <p class="contribution">팀 프로젝트 | 기여도 50%</p>
+              <div class="tool">
+                <strong>Tool</strong>
+                <div class="tool-icons">
+                  <img src="images/포토샵이미지.png" alt="Ps" />
+                  <img src="images/일러스트이미지.png" alt="Ai" />
+                  <img src="images/피그마이미지.png" alt="Figma" />
+                </div>
+              </div>
+              <p class="desc">
+                SOLE Sneaker Platform App Design<br />
+                스니커즈 중심의 커머스 플랫폼을 기획하고, 탐색부터 구매까지
+                자연스럽게 이어지는 UX 흐름을 설계했습니다.
+              </p>
+              <a href="#" class="show-more">show more</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 publishing -->
+        <!-- Publishing Section -->
+        <section id="publishing" class="section publishing-section">
+          <div class="publishing-header">
+            <span class="num">03</span>
+            <h2 class="title">Publishing</h2>
+          </div>
+
+          <div class="publishing-content">
+            <div class="publishing-left">
+              <div class="publishing-card">
+                <div class="publishing-scroll-box">
+                  <img src="" alt="쇼핑몰 플랫폼 제작" />
+                </div>
+              </div>
+            </div>
+
+            <div class="publishing-right">
+              <p class="work">
+                <strong>Work</strong> 쇼핑몰 플랫폼 제작 - 이름 넣기
+              </p>
+              <p class="contribution">개인 프로젝트 | 기여도 100%</p>
+
+              <div class="tool">
+                <strong>Tool</strong>
+                <div class="tool-icons">
+                  <img src="images/포토샵이미지.png" alt="Photoshop" />
+                  <img src="images/일러스트이미지.png" alt="Illustrator" />
+                  <img src="images/피그마이미지.png" alt="Figma" />
+                  <img src="images/vs코드이미지.png" alt="VS Code" />
+                  <img src="images/깃허브이미지.png" alt="GitHub" />
+                  <img src="images/html이미지.png" alt="HTML5" />
+                  <img src="images/css이미지.png" alt="CSS3" />
+                  <img src="images/js이미지.png" alt="JavaScript" />
+                  <img src="images/gpt.png" alt="Gpt" />
+                  <img src="images/jemi.png" alt="Jemi" />
+                </div>
+              </div>
+
+              <p class="desc">
+                Interactive Brand Site Renewal<br />
+                Gasp 및 ScrollTrigger를 활용하여 고도화된 스크롤 애니메이션을
+                구현했습니다.<br />
+                비디오 백그라운드와 시인성 높은 타이포그래피 배치로 브랜드
+                아이덴티티를 강조했습니다.
+              </p>
+
+              <a href="#" class="show-more">show more</a>
+            </div>
+          </div>
+
+          <div class="publishing-content">
+            <div class="publishing-left">
+              <div class="publishing-card pethroom-bg">
+                <div class="publishing-scroll-box">
+                  <img src="" alt="클론코딩- OPEN" />
+                </div>
+              </div>
+            </div>
+
+            <div class="publishing-right">
+              <p class="work"><strong>Work</strong> 클론 코딩 - OPEN</p>
+              <p class="contribution">개인 프로젝트 | 기여도 100%</p>
+
+              <div class="tool">
+                <strong>Tool</strong>
+                <div class="tool-icons">
+                  <img src="images/vs코드이미지.png" alt="VS Code" />
+                  <img src="images/깃허브이미지.png" alt="GitHub" />
+                  <img src="images/html이미지.png" alt="HTML5" />
+                  <img src="images/css이미지.png" alt="CSS3" />
+                  <img src="images/js이미지.png" alt="JavaScript" />
+                  <img src="images/gpt.png" alt="Gpt" />
+                  <img src="images/jemi.png" alt="Jemi" />
+                </div>
+              </div>
+
+              <p class="desc">
+                Responsive E-commerce Publishing<br />
+                다양한 디바이스 환경에 대응하는 반응형 그리드 시스템을
+                적용했습니다.<br />
+                사용자 편의를 고려한 필터링 시스템과 장바구니 인터랙션을
+                중점적으로 구현했습니다.
+              </p>
+
+              <a href="#" class="show-more">show more</a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer" class="footer">
+      <div class="footer-container">
+        <h2 class="thanks-text">thank you!</h2>
+
+        <div class="marquee-wrapper">
+          <div class="contact-row">
+            <span class="phone">+82(010)-4721-7410</span>
+            <span class="email">kjwp5897@gmail.com</span>
+
+            <span class="phone">+82(010)-4721-7410</span>
+            <span class="email">kjwp5897@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="copyright">
+          © 2025. Copywriter kimgeewon. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- 2. 모달 창 구조 (페이지 맨 밑에 딱 한 번만!) -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+    </div>
+  </body>
+</html>
