@@ -1328,7 +1328,7 @@ html.intro-fill-locked body {
   display: flex; /* 가로 나열 */
   align-items: center; /* 세로 높이 맞춤 */
   justify-content: flex-start;
-  
+
   /* 왼쪽부터 차례대로 붙임 (중요) */
   gap: 15px;
 }
