@@ -363,7 +363,7 @@ html.intro-fill-locked body {
 .profile-text p {
   opacity: 0;
   transform: translateY(15px);
-  transition: all 0.5s ease-out; /* 0.8s -> 0.5s로 단축 */
+  transition: all 0.8s ease-out; /* 0.8s -> 0.5s로 단축 */
 }
 
 /* 나타날 때 상태 */
@@ -374,10 +374,10 @@ html.intro-fill-locked body {
 
 /* 문단 간격(Delay) 단축 */
 .profile-text.active p:nth-child(1) {
-  transition-delay: 0.1s;
+  transition-delay: 0.3s;
 } /* 거의 바로 등장 */
 .profile-text.active p:nth-child(2) {
-  transition-delay: 0.3s;
+  transition-delay: 0.5s;
 } /* 0.2초 뒤 바로 등장 */
 
 .left-content .profile-text {
@@ -409,7 +409,7 @@ html.intro-fill-locked body {
 .right-content.active {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.4s; /* 왼쪽 문단들이 나온 뒤에 등장 */
+  transition-delay: 0.6s; /* 왼쪽 문단들이 나온 뒤에 등장 */
 }
 .name-tag {
   /* display: flex; */
@@ -469,9 +469,30 @@ html.intro-fill-locked body {
   font-size: 18px;
   font-weight: 200;
   line-height: 1.6;
-  color: #999;
+  color: #333;
+}
+/* 커서 스타일 */
+.cursor-typo {
+  display: inline-block;
+  width: 10px;
+  height: 1.1em;
+  font-weight: 200;
+  color: #ff6a00;
+  margin-left: 4px;
+  animation: blink 0.8s infinite;
+  vertical-align: middle;
 }
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 줄바꿈 인식을 위한 설정 */
+#typing-sub {
+  white-space: pre-wrap;
+}
 /* 프로필 하단 상세 정보 레이아웃 */
 .profile-details {
   display: flex;
@@ -893,8 +914,12 @@ html.intro-fill-locked body {
   height: 32px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
+.tool-icons img:hover {
+  transform: translateY(-5px) scale(1.1); /* 마우스 올리면 톡 튀어오름 */
+}
 /* -----슬라이드? */
 /* 슬라이더 시스템 (젠틀몬스터 & 페스룸 공통) */
 /* 슬라이더 작동을 위한 필수 스타일 */
@@ -1302,7 +1327,9 @@ html.intro-fill-locked body {
 .more-info {
   display: flex; /* 가로 나열 */
   align-items: center; /* 세로 높이 맞춤 */
-  justify-content: flex-start; /* 왼쪽부터 차례대로 붙임 (중요) */
+  justify-content: flex-start;
+  
+  /* 왼쪽부터 차례대로 붙임 (중요) */
   gap: 15px;
 }
 .process {
