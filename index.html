@@ -8,6 +8,9 @@
     <script src="js/script.js" defer></script>
     <script src="js/footer.js" defer></script>
     <script src="js/cursor.js" defer></script>
+    <script src="js/intro-img.js" defer></script>
+    <script src="js/profile.js" defer></script>
+    <script src="js/index.js" defer></script>
 
     <script src="js/header-nav-mq.js" defer></script>
     <script src="js/modal.js" defer></script>
@@ -150,8 +153,8 @@
               <img src="images/증명사진.png" alt="my-photo" />
             </div>
             <div class="contact-info">
-              <span>📞 010.4721.7410</span>
-              <span>✉️ kjwp5897@naver.com</span>
+              <span>(+82) 4721 7410</span>
+              <span>kjwp5897@naver.com</span>
             </div>
             <div class="sub-text">
               직관적인 흐름을 설계하고,<br />
@@ -226,13 +229,28 @@
               <h2 class="num-text">01</h2>
               <h3 class="category-title">design</h3>
               <ul class="work-list">
-                <li>랜딩페이지 - 젠틀몬스터</li>
-                <li>상세페이지 - 페스룸</li>
-                <li>gif상세페이지 - 에어팟맥스2</li>
+                <li data-img="images/김지원_디자인 구성요소 제작.jpg">
+                  랜딩페이지 - 젠틀몬스터
+                </li>
+                <li data-img="images/상세페이지 제작.jpg">
+                  상세페이지 - 페스룸
+                </li>
+                <li data-img="images/max_01.jpg" alt="에어팟맥스1">
+                  gif상세페이지 - 에어팟맥스2
+                </li>
                 <li>sns배너 디자인</li>
-                <li>포스터 디자인 - 나이키 x 슈프림 에어포스</li>
-                <li>웹사이트 리디자인 - 크린토피아</li>
+                <li data-img="images/슈프림나이키 에어포스_김지원.jpg">
+                  포스터 디자인 - 나이키 x 슈프림 에어포스
+                </li>
+                <li data-img="images/re_cleantopia.jpg">
+                  웹사이트 리디자인 - 크린토피아
+                </li>
               </ul>
+
+              <!-- 마우스 커서를 따라다닐 이미지 프리뷰 박스 -->
+              <div id="image-preview-container">
+                <img src="" alt="preview" id="preview-img" />
+              </div>
             </div>
             <div class="vertical-line"></div>
           </div>
@@ -243,8 +261,10 @@
               <h2 class="num-text">02</h2>
               <h3 class="category-title">branding</h3>
               <ul class="work-list">
-                <li>플랫폼 웹사이트 제작 - 잇유(eat u)</li>
-                <li>앱디자인 - 쏠(sole)</li>
+                <li data-img="images/잇유-메인.png">
+                  플랫폼 웹사이트 제작 - 잇유(eat u)
+                </li>
+                <li data-img="images/쏠-프로세스.png">앱디자인 - 쏠(sole)</li>
               </ul>
             </div>
             <div class="vertical-line"></div>
@@ -527,7 +547,7 @@
                   margin-bottom: 15px;
                   font-size: 13px;
                   color: #999;
-                  font-weight: bold;
+                  /* font-weight: bold; */
                   letter-spacing: 1px;
                 "
               >
@@ -538,7 +558,7 @@
                 style="
                   height: 500px;
                   margin-bottom: 15px;
-                  border: 1px solid #ddd;
+                  /* border: 1px solid #ddd; */
                 "
               >
                 <div class="scroll-content">
@@ -547,10 +567,10 @@
               </div>
               <!-- 바로가기 링크 -->
               <a
-                href="리디자인링크 넣어야됨"
+                href="https://kimgeewon.github.io/cleantopia/"
                 target="_blank"
                 class="text-link"
-                style="font-weight: bold; color: #888"
+                style="color: #888"
                 >리디자인 사이트 바로가기</a
               >
             </div>
@@ -605,7 +625,7 @@
             class="comparison-row"
             style="
               display: flex;
-              gap: 50px;
+              gap: 140px;
               margin-bottom: 60px;
               align-items: flex-start;
               justify-content: center;
@@ -748,7 +768,7 @@
                 <strong>Work</strong> 플랫폼 웹 사이트 제작 - 혼자 먹기 싫을 때,
                 잇유
               </p>
-              <p class="contribution">팀 프로젝트 | 기여도 33%</p>
+              <p class="contribution">팀 프로젝트 | 기여도 40%</p>
 
               <div class="tool">
                 <strong>Tool</strong>
@@ -806,7 +826,7 @@
                 스니커즈 중심의 커머스 플랫폼을 기획하고, 탐색부터 구매까지
                 자연스럽게 이어지는 UX 흐름을 설계했습니다.
               </p>
-              <a href="#" class="show-more">show more</a>
+              <a href="" class="show-more">show more</a>
             </div>
           </div>
         </section>

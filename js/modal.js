@@ -18,12 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         };
     });
-
-    // 2. 모달 영역 클릭 시 닫기
+  // 2. 모달 영역 클릭 시 닫기 (이미지가 아닌 배경 클릭 시에만)
     if (modal) {
-        modal.onclick = function() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto"; // 배경 스크롤 다시 허용
+        modal.onclick = function(event) {
+            // 핵심: 클릭한 대상(event.target)이 '이미지(modalImg)'가 아닐 때만 닫기
+            if (event.target !== modalImg) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
         };
     }
 });

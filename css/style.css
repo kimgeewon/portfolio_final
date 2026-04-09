@@ -167,7 +167,7 @@ nav ul li a {
 
 /* 인트로 섹션 */
 .section {
-  padding: 70px 100px;
+  padding: 190px 100px 0 100px;
 }
 
 /* 인트로 줄별 채움: JS가 각 [data-intro-line]에 --line-fill 설정 */
@@ -295,32 +295,38 @@ html.intro-fill-locked body {
   height: 500px;
   margin-top: -640px;
 }
+.deco-images img {
+  /* 기존에 작성하신 width, top, left 등은 그대로 두세요 */
+  position: absolute;
+  pointer-events: none; /* 스티커 때문에 클릭이 방해받지 않게 하려면 추가 */
+  will-change: transform; /* 브라우저 최적화 (버벅임 방지) */
+}
 .deco-images img:nth-child(1) {
   width: 70px; /* 데코 이미지 크기 조절 */
   position: absolute;
-  top: 10%;
+  top: 17%;
   left: 32%;
   /* margin-right: 15px; */
 }
 .deco-images img:nth-child(2) {
   width: 90px; /* 데코 이미지 크기 조절 */
   position: absolute;
-  top: 68%;
+  top: 72%;
   left: 20%;
   /* margin-right: 15px; */
 }
 .deco-images img:nth-child(3) {
   width: 200px; /* 데코 이미지 크기 조절 */
   position: absolute;
-  top: 90%;
-  left: 53%;
+  top: 70%;
+  left: 45%;
   /* margin-right: 15px; */
 }
 .deco-images img:nth-child(4) {
   width: 130px; /* 데코 이미지 크기 조절 */
   position: absolute;
-  top: 28%;
-  left: 60%;
+  top: 32%;
+  left: 68%;
   /* margin-right: 15px; */
 }
 
@@ -353,35 +359,84 @@ html.intro-fill-locked body {
   width: 100%;
   margin-top: 320px; /* 사진 위치와 맞추기 위한 여백 */
 }
+/* 초기 상태: 살짝 아래에 대기 (이동 거리도 짧게 15px) */
+.profile-text p {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.5s ease-out; /* 0.8s -> 0.5s로 단축 */
+}
+
+/* 나타날 때 상태 */
+.profile-text.active p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 문단 간격(Delay) 단축 */
+.profile-text.active p:nth-child(1) {
+  transition-delay: 0.1s;
+} /* 거의 바로 등장 */
+.profile-text.active p:nth-child(2) {
+  transition-delay: 0.3s;
+} /* 0.2초 뒤 바로 등장 */
+
 .left-content .profile-text {
-  margin-left: -450px;
+  margin-top: 115px;
+  margin-left: -260px;
 }
 .left-content .profile-text p {
   font-family: "SUIT", sans-serif;
-  font-weight: 300;
-  font-size: 22px;
+  font-weight: 200;
+  font-size: 20px;
   line-height: 1.8;
   color: #111;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   word-break: keep-all;
 }
 
 /* 오른쪽 프로필 영역 */
 .right-content {
-  width: 500px; /* 사진 너비에 맞춰 고정 */
+  width: 425px; /* 사진 너비에 맞춰 고정 */
   text-align: right; /* 전체 우측 정렬 */
   /* margin: 0 auto; */
-  margin-right: -400px;
-}
+  margin-right: -250px;
 
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+/* 활성화 상태: 제자리로 올라옴 */
+.right-content.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s; /* 왼쪽 문단들이 나온 뒤에 등장 */
+}
 .name-tag {
   /* display: flex; */
   font-family: "SUIT", sans-serif;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   color: #111;
   margin: 80px 0 -50px 0;
   padding: 0;
+
+  opacity: 0;
+  letter-spacing: -2px; /* 살짝 모여 있음 */
+  transform: translateY(10px);
+  transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+  display: inline-block;
+}
+/* 나타날 때 */
+.right-content.active .name-tag {
+  opacity: 1;
+  letter-spacing: 4px; /* 세련되게 벌어짐 */
+  transform: translateY(0);
+  transition-delay: 0.6s; /* 사진보다 살짝 늦게 등장 */
+}
+/* [추가] 스크롤을 다시 올릴 때(active가 사라질 때) 딜레이 없이 즉시 초기화 */
+.right-content:not(.active) .name-tag {
+  transition-delay: 0s;
+  transition-duration: 0.3s;
 }
 .photo-box {
   /* margin-top: 170px; */
@@ -393,6 +448,10 @@ html.intro-fill-locked body {
   width: 300px;
   filter: grayscale(20%); /* 이미지 느낌에 따라 조절 */
   margin-bottom: 10px;
+  transition: transform 0.4s ease;
+}
+.photo-box:hover img {
+  transform: scale(1.03); /* 마우스 올리면 아주 살짝 커짐 */
 }
 
 .contact-info {
@@ -407,8 +466,8 @@ html.intro-fill-locked body {
 
 .sub-text {
   font-family: "SUIT", sans-serif;
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 200;
   line-height: 1.6;
   color: #999;
 }
@@ -421,10 +480,47 @@ html.intro-fill-locked body {
   padding-top: 50px;
 }
 .details-left {
-  margin-left: -450px;
-}
-.details-left {
+  margin-left: -260px;
   flex: 2;
+}
+/* 왼쪽: 학력, 경력 섹션 */
+.detail-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+/* 오른쪽: 기술 스택 전체 박스 */
+.details-right {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.8s ease-out;
+}
+
+/* 활성화 상태 (스크롤 진입 시) */
+.detail-section.active,
+.details-right.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 계단식 등장 딜레이 */
+.detail-section.active:nth-child(1) {
+  transition-delay: 0.1s;
+} /* education */
+.detail-section.active:nth-child(2) {
+  transition-delay: 0.3s;
+} /* experience */
+.details-right.active {
+  transition-delay: 0.5s;
+} /* skills */
+
+/* [보너스] 스킬 아이콘 호버 효과 */
+.skills-grid img {
+  transition: transform 0.3s ease;
+}
+.skills-grid img:hover {
+  transform: translateY(-5px) scale(1.1); /* 마우스 올리면 톡 튀어오름 */
 }
 
 .details-right {
@@ -432,7 +528,7 @@ html.intro-fill-locked body {
   display: flex;
   flex-direction: column;
   align-items: center; /* 스킬 섹션 중앙 정렬 */
-  margin-right: -580px;
+  margin-right: -330px;
 }
 
 .detail-section h3,
@@ -543,7 +639,7 @@ html.intro-fill-locked body {
 .work-container {
   display: flex;
   align-items: stretch; /* 수직선이 내용 높이에 맞춰 늘어나게 함 */
-  gap: 180px; /* 간격은 내부 margin/padding으로 조절 */
+  gap: 100px; /* 간격은 내부 margin/padding으로 조절 */
   overflow: visible;
 }
 
@@ -552,10 +648,37 @@ html.intro-fill-locked body {
   display: flex;
   align-items: stretch;
 }
+.category-item:hover .num-text {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
 
+/* 2. 이미지 프리뷰 컨테이너 (숨겨져 있다가 호버 시 나타남) */
+#image-preview-container {
+  position: fixed;
+  width: 200px; /* 프리뷰 이미지 크기 */
+  height: 150px;
+  pointer-events: none; /* 마우스 이벤트를 방해하지 않음 */
+  z-index: 1000;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%); /* 커서 중앙 정렬 */
+}
+
+#image-preview-container.active {
+  opacity: 1;
+}
+
+#preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
 /* 텍스트 콘텐츠 영역 */
 .category-content {
-  width: 400px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* 모든 자식 요소를 오른쪽으로 밀착 */
@@ -582,7 +705,7 @@ html.intro-fill-locked body {
 
 /* 카테고리 제목 (design 등) */
 .category-title {
-  font-family: "SUIT", "Noto Sans KR", sans-serif;
+  font-family: "Suit", sans-serif;
   font-size: 48px;
   font-weight: 200;
   margin: 60px -20px 30px 0;
@@ -593,7 +716,7 @@ html.intro-fill-locked body {
 
 /* 리스트 스타일 */
 .work-list {
-  font-family: "SUIT", "Noto Sans KR", sans-serif;
+  font-family: "Suit", sans-serif;
   font-weight: 200;
   font-size: 24px;
   list-style: none;
@@ -605,9 +728,8 @@ html.intro-fill-locked body {
 }
 
 .work-list li {
-  font-family: "SUIT", "Noto Sans KR", sans-serif;
-  font-size: 22px;
-  font-weight: 200;
+  font-family: "SUIT", sans-serif;
+  font-size: 18px;
   color: #111;
   margin-bottom: 16px;
   line-height: 1.4;
@@ -625,6 +747,9 @@ html.intro-fill-locked body {
   /* height: 100%; 부모 높이만큼 꽉 차게 */
   margin: -50px 40px;
   flex-shrink: 0; /* 선 두께가 찌그러지지 않게 고정 */
+
+  transition: height 1.2s cubic-bezier(0.4, 0, 0.2, 1); /* 부드럽게 슥- 내려옴 */
+  transition-delay: 0.5s; /* 텍스트가 먼저 나오고 선이 뒤따라 나오게 */
 }
 
 /* 반응형: 화면이 좁을 때 세로로 배치 */
@@ -769,6 +894,7 @@ html.intro-fill-locked body {
   width: auto;
   object-fit: contain;
 }
+
 /* -----슬라이드? */
 /* 슬라이더 시스템 (젠틀몬스터 & 페스룸 공통) */
 /* 슬라이더 작동을 위한 필수 스타일 */
@@ -814,7 +940,8 @@ html.intro-fill-locked body {
 /* 화살표 버튼 배치 */
 .slide-btn {
   position: absolute;
-  top: 45% !important; /* 이미지 윈도우 중앙 즈음 */
+  top: 45% !important;
+  /* 이미지 윈도우 중앙 즈음 */
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -822,12 +949,12 @@ html.intro-fill-locked body {
   z-index: 100;
 }
 
-.prev-btn {
+/* .prev-btn {
   left: -10px !important;
 }
 .next-btn {
   right: -10px !important;
-}
+} */
 
 .slide-btn img {
   width: 20px !important;
@@ -892,7 +1019,7 @@ html.intro-fill-locked body {
   margin: 0 auto;
   position: relative; /* 화살표 배치를 위해 필수 */
   transition: background-color 0.5s ease-in-out;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* 상단 타이틀: 우측 정렬 및 큰 폰트 */
@@ -906,6 +1033,7 @@ html.intro-fill-locked body {
 }
 
 .branding-header .num {
+  margin-left: -140px;
   z-index: 9999;
   font-family: "Gmarket Sans", sans-serif;
   font-weight: 600;
@@ -916,6 +1044,7 @@ html.intro-fill-locked body {
 }
 
 .branding-header .title {
+  margin-left: -140px;
   z-index: 9999;
   font-family: "Playfair display", sans-serif;
   font-weight: 600;
@@ -1197,7 +1326,7 @@ html.intro-fill-locked body {
   min-height: 50vh;
   height: auto;
   background-color: #2a2a2a;
-  padding: 70px 3vw;
+  /* padding: 70px 3vw; */
   box-sizing: border-box;
   margin-left: 0; /* 마진 해제 */
   display: flex;
@@ -1208,16 +1337,16 @@ html.intro-fill-locked body {
 }
 
 .footer-container {
-  width: 100%;
+  /* width: 100%; */
   text-align: left;
   /* max-width: 100%; */
   margin: 0 auto;
   /* 이미지처럼 왼쪽 정렬 */
-  text-align: left;
-  overflow: hidden;
+  /* text-align: left; */
+  /* overflow: hidden; */
   white-space: nowrap; /* 글자가 아래로 떨어지지 않게 고정 */
   position: relative; /* 위치 기준점 설정 */
-  height: 100%; /* 높이 확보 */
+  height: 100%;
 }
 
 /* 상단 텍스트: 상대적으로 얇고 작게 */
@@ -1226,6 +1355,8 @@ html.intro-fill-locked body {
   font-size: clamp(40px, 8vw, 80px); /* 화면 크기에 따라 폰트 조절 */
   font-weight: 300;
   color: #f5f5f5;
+  margin-top: 70px;
+  margin-left: 50px;
   margin-bottom: 10vh; /* 간격을 화면 높이 비율로 변경 */
   letter-spacing: -1px;
 }
@@ -1239,7 +1370,7 @@ html.intro-fill-locked body {
   display: inline-block;
   font-family: "SUIT", "Noto Sans KR", sans-serif;
   font-size: clamp(30px, 6vw, 80px); /* 반응형 폰트 */
-  font-weight: 600;
+  font-weight: 500;
   color: #f5f5f5;
   line-height: 1.2;
   animation: marquee-flow 20s linear infinite;
@@ -1249,11 +1380,16 @@ html.intro-fill-locked body {
 }
 .copyright {
   position: absolute;
-  bottom: -10px; /* 바닥에서 50px 띄움 */
-  right: 0; /* 우측 정렬 (취향에 따라 left: 0;으로 변경 가능) */
-  font-family: "SUIT", "Noto Sans KR", sans-serif;
+  right: 0;
+  /* 이 부분의 주석을 풀어서 활성화하세요 */
+  bottom: -72px; /* 원하는 높이만큼 설정 */
+
+  margin-right: 20px;
+  /* 오른쪽 벽에서 20px 띄우고 싶을 때 유지 */
+
+  font-family: "SUIT", sans-serif;
   font-size: 16px; /* 너무 크지 않게 설정하여 대비 효과 */
-  font-weight: 500; /* 얇은 두께로 세련된 느낌 */
+  font-weight: 400; /* 얇은 두께로 세련된 느낌 */
   color: #888; /* 약간 흐린 회색으로 본문과 차별화 */
   letter-spacing: 1px;
   text-transform: uppercase; /* 대문자로 변경하여 디자인 요소 강조 */
@@ -1470,7 +1606,7 @@ html.intro-fill-locked body {
   .contact-info {
     justify-content: center; /* 중앙 정렬 */
     font-size: 16px;
-    gap: 15px;
+    gap: 100px;
     margin-bottom: 15px;
     color: #888;
   }
@@ -1985,39 +2121,42 @@ html.intro-fill-locked body {
 /* ----------------- */
 /* 모달 */
 /* 모달 배경 */
+/* 모달 배경: Flexbox로 자식을 완벽하게 중앙 정렬 */
 .modal {
   display: none;
   position: fixed;
-  z-index: 9999; /* 다른 요소보다 항상 위에 */
+  z-index: 9999;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%; /* 화면 너비 전체 */
+  height: 100%; /* 화면 높이 전체 */
+  background-color: rgba(0, 0, 0, 0.95); /* 더 어둡게 해서 집중도 상승 */
 
-  /* 중앙 정렬을 위한 추가 */
+  /* 세로 스크롤 허용 */
+  overflow-y: auto;
+  /* 가로 중앙 정렬만 유지 */
+  display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* 상단부터 시작 */
+  padding: 40px 0; /* 위아래 여백 */
 }
 
-/* 모달 이미지 스타일 */
+/* 모달 이미지: 화면 비율에 맞춰 최대 크기로 확장 */
 .modal-content {
-  margin: auto;
+  width: 90%; /* 화면 가로의 90%까지 키움 */
+  max-width: 800px; /* 너무 커지는 것 방지 (원하는 대로 조절) */
+  height: auto; /* 세로는 비율에 맞춰 무한히 늘어남 */
   display: block;
-  max-width: 90%;
-  max-height: 90%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-/* 닫기 버튼 */
+/* 닫기 버튼: 이미지 위에 가리지 않게 상단 고정 */
 .close {
   position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
+  top: 15px;
+  right: 25px;
+  color: #ff6a00;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 10000; /* 이미지보다 위에 */
 }
