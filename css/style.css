@@ -1299,6 +1299,35 @@ html.intro-fill-locked body {
   /* calc(-100% + 500px)에서 500px은 위에서 설정한 .sole-bg의 높이와 맞춰야 합니다 */
   transform: translateY(calc(-100% + 500px));
 }
+.more-info {
+  display: flex; /* 가로 나열 */
+  align-items: center; /* 세로 높이 맞춤 */
+  justify-content: flex-start; /* 왼쪽부터 차례대로 붙임 (중요) */
+  gap: 15px;
+}
+.process {
+  font-family: "Playfair display", sans-serif;
+  display: flex; /* 아이콘/글자 중앙 정렬 */
+  align-items: center;
+  justify-content: center;
+
+  width: 60px; /* 원의 크기 (가로) */
+  height: 60px; /* 원의 크기 (세로) */
+  border-radius: 50%; /* 완전한 동그라미로 만듦 */
+
+  background-color: #f5f5f5;
+  color: #ff6a00;
+  text-decoration: none;
+  font-size: 12px; /* 글자 크기 조절 */
+  font-weight: bold;
+  transition: 0.3s; /* 부드러운 색상 변화 */
+  flex-shrink: 0; /* 동그라미 모양이 찌그러지지 않게 방어 */
+}
+
+.process:hover {
+  background-color: rgb(37, 35, 1);
+  transform: scale(1.1); /* 마우스 올리면 살짝 커짐 */
+}
 
 /* 03 publishing */
 /* 상단 타이틀: 우측 정렬 및 큰 폰트 */
@@ -1519,16 +1548,16 @@ html.intro-fill-locked body {
 }
 .copyright {
   position: absolute;
-  right: 0;
+  /* right: 0; */
   /* 이 부분의 주석을 풀어서 활성화하세요 */
   bottom: -72px; /* 원하는 높이만큼 설정 */
-
-  margin-right: 20px;
+  margin-left: 750px;
+  /* margin-right: 20px; */
   /* 오른쪽 벽에서 20px 띄우고 싶을 때 유지 */
 
   font-family: "SUIT", sans-serif;
-  font-size: 16px; /* 너무 크지 않게 설정하여 대비 효과 */
-  font-weight: 400; /* 얇은 두께로 세련된 느낌 */
+  font-size: 14px; /* 너무 크지 않게 설정하여 대비 효과 */
+  font-weight: 300; /* 얇은 두께로 세련된 느낌 */
   color: #888; /* 약간 흐린 회색으로 본문과 차별화 */
   letter-spacing: 1px;
   text-transform: uppercase; /* 대문자로 변경하여 디자인 요소 강조 */
