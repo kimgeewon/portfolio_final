@@ -2381,3 +2381,52 @@ html.intro-fill-locked body {
   cursor: pointer;
   z-index: 10000; /* 이미지보다 위에 */
 }
+.floating-btn {
+  /* 위치 고정 */
+  position: fixed;
+  bottom: 30px; /* 바닥에서 거리 */
+  right: 30px; /* 오른쪽에서 거리 */
+
+  /* 디자인 */
+  width: 60px;
+  height: 60px;
+  background-color: #ff6a00; /* 포인트 컬러 */
+  color: white;
+  border-radius: 50%; /* 원형 모양 */
+  font-family: "playfair display", sans-serif;
+  /* 중앙 정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 10px;
+  /* font-weight: bold; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  /* 부드러운 효과 */
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  z-index: 9999; /* 다른 요소보다 위에 표시 */
+  /* 둥둥 떠다니는 애니메이션 적용 */
+  animation: float 3s ease-in-out infinite;
+}
+/* 둥둥 효과 정의 */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px); /* 위로 15px 이동 */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* 마우스 올렸을 때 반응 */
+.floating-btn:hover {
+  animation-play-state: paused;
+  transform: scale(1.1); /* 살짝 커짐 */
+  background-color: #a2430c;
+  opacity: 0.9;
+}
