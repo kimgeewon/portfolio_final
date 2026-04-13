@@ -1,6 +1,6 @@
 /**
  * 포트폴리오 인트로 스티커 패럴랙스 효과
- * 작성하신 CSS의 위치(%값)를 기준으로 마우스 움직임에 반응합니다.
+ * 작성하신 CSS의 위치(%값)를 기준으로 마우스 움직임에 반응
  */
 
 const stickers = document.querySelectorAll(".deco-images img");
@@ -30,7 +30,7 @@ window.addEventListener("mousemove", (e) => {
     const finalY = moveY * speed;
 
     // 기존 CSS 위치를 유지하며 transform으로 미세하게 이동 + 아주 살짝 회전
-    // rotate를 섞어주면 훨씬 '스티커'가 떠다니는 느낌이 납니다.
+    // rotate를 섞어주면 훨씬 '스티커'가 떠다니는 느낌이 남.
     sticker.style.transform = `translate(${finalX}px, ${finalY}px) rotate(${finalX * 0.1}deg)`;
     sticker.style.transition = "transform 0.1s ease-out"; // 부드러운 따라오기 효과
   });

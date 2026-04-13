@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (modal && modalImg) {
         modal.style.display = "flex"; // 모달 보이기
         modalImg.src = this.src; // 클릭한 이미지 경로 복사
-        document.body.style.overflow = "hidden"; // 배경 스크롤 방지(선택사항)
+        document.body.style.overflow = "hidden"; // 배경 스크롤 방지
       }
     };
   });
